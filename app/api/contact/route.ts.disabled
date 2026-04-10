@@ -1,0 +1,23 @@
+import { Resend } from 'resend'
+
+const resend = new Resend(process.env.RESEND_API_KEY)
+
+export async function POST(req: Request) {
+  const data = await req.json()
+
+  const { name, email, message } = data
+
+  await resend.emails.send({
+    from: 'portfolio@resend.dev',
+    to: 'sanketshermale9@gmail.com',
+    subject: 'New Portfolio Contact',
+    html: `
+      <h2>New Contact Message</h2>
+      <p><b>Name:</b> ${name}</p>
+      <p><b>Email:</b> ${email}</p>
+      <p><b>Message:</b> ${message}</p>
+    `,
+  })
+
+  return Response.json({ success: true })
+}

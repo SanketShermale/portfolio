@@ -30,7 +30,7 @@ const About = () => {
                     JSPM's Rajarshi Shahu College of Engineering, Pune
                   </h4>
                   <p className="text-blue-600 dark:text-blue-400 font-medium">Information Technology Engineering</p>
-                  <p className="text-gray-600 dark:text-gray-400">2023 - 2027 | CGPA: 9.52*</p>
+                  <p className="text-gray-600 dark:text-gray-400">2023 - 2027 | CGPA: 8.52*</p>
                 </div>
                 <div className="border-l-4 border-purple-500 pl-4">
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
